@@ -339,7 +339,7 @@ static NSURLCredential* clientAuthenticationCredential;
         if (!baseURL) {
             baseURL = [NSURL URLWithString:@"about:blank"];
         }
-        else if ([baseURL isEqual:@"MainBundlePath"]) {
+        else if ([_source[@"baseUrl"] isEqual:@"MainBundlePath"]) {
             NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
             baseURL = [NSURL fileURLWithPath:bundlePath];
         }
